@@ -1,13 +1,55 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>addProducto</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Add</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Back"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">addProducto</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Presupuesto</ion-label>
+      <ion-input type="text" name="txtPresupuesto"  [(ngModel)]="newProducto.presupuesto" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Unidad</ion-label>
+      <ion-input type="text" name="txtUnidad" [(ngModel)]="newProducto.unidad" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Producto</ion-label>
+      <ion-input type="text" name="txtProducto" [(ngModel)]="newProducto.producto" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input type="number" name="txtCantidad" [(ngModel)]="newProducto.cantidad" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Valor Unitario</ion-label>
+      <ion-input type="number" name="txtValorUnitario" [(ngModel)]="newProducto.valorUnitario" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Valor Total</ion-label>
+      <ion-input type="number" name="txtValorTotal"  [(ngModel)]="newProducto.valorTotal" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Fecha</ion-label>
+      <ion-input type="date" name="txtFecha" [(ngModel)]="newProducto.fecha" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Proveedor</ion-label>
+      <ion-input type="text" name="txtProveedor"[(ngModel)]="newProducto.proveedor" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="crearProducto()" color="success" expand="block">Guardar</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
 </ion-content>

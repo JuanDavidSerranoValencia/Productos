@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'list-productos',
     pathMatch: 'full'
   },
   {
@@ -20,15 +20,15 @@ const routes: Routes = [
     loadChildren: () => import('./productos/add-producto/add-producto.module').then( m => m.AddProductoPageModule)
   },
   {
-    path: 'update-producto',
+    path: 'update-producto/:id',
     loadChildren: () => import('./productos/update-producto/update-producto.module').then( m => m.UpdateProductoPageModule)
   },
   {
-    path: 'detail-producto',
+    path: 'detail-producto/:id',
     loadChildren: () => import('./productos/detail-producto/detail-producto.module').then( m => m.DetailProductoPageModule)
   },
   {
-    path: 'delete-producto',
+    path: 'delete-producto/:id',
     loadChildren: () => import('./productos/delete-producto/delete-producto.module').then( m => m.DeleteProductoPageModule)
   }
 ];

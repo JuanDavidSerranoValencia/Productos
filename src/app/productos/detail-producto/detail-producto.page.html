@@ -1,13 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>detailProducto</ion-title>
+    <ion-title>Detail</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Back"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detailProducto</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Id {{producto.id}}</ion-card-title>
+      <ion-card-title>Producto  {{producto.producto}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <strong>Unidad:</strong> {{producto.unidad}}
+    </ion-card-content>
+    <ion-card-content>
+      <strong> Presupuesto: {{producto.presupuesto}}</strong> 
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Cantidad:</strong> {{producto.cantidad}}
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Valor Unitario:</strong> {{producto.valorUnitario}}
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Valor Total:</strong> {{producto.valorTotal}}
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Fecha:</strong> {{producto.fecha}}
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Proveedor:</strong> {{producto.proveedor}}
+    </ion-card-content>
+
+    <ion-button [routerLink]="['/update-producto',producto.id]" color="warning"><ion-icon name="create"></ion-icon></ion-button>
+    <ion-button [routerLink]="['/delete-producto',producto.id]" color="danger"><ion-icon name="trash"></ion-icon></ion-button>
+  </ion-card>
 </ion-content>
