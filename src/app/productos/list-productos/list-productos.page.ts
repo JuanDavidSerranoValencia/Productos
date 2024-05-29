@@ -29,7 +29,7 @@ export class ListProductosPage {
     await loading.present();
 
     this.productosServ.ListarProductos().subscribe(
-      (resp: IProductos[]) => {
+      (resp: IProductos) => {
         loading.dismiss();
         let listString = JSON.stringify(resp)
         this.productos = JSON.parse(listString)

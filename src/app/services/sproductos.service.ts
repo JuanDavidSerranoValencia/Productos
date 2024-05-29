@@ -13,8 +13,8 @@ export class SProductosService {
   constructor(private http: HttpClient) { }
 
 
-  ListarProductos():Observable<IProductos[]>{
-    return this.http.get<IProductos[]>(`${environment.apiURL}/productos`)
+  ListarProductos():Observable<IProductos>{
+    return this.http.get<IProductos>(`${environment.apiURL}/productos`)
   }
 
   crearProductos(newProducto: IProducto): Observable<IProducto> {

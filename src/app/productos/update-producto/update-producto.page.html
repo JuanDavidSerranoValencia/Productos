@@ -14,7 +14,7 @@
   <form>
     <ion-item lines="full">
       <ion-label position="floating">Presupuesto</ion-label>
-      <ion-input type="text" name="txtPresupuesto"  [(ngModel)]="producto.presupuesto" required></ion-input>
+      <ion-input type="text" name="txtPresupuesto" [(ngModel)]="producto.presupuesto" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Unidad</ion-label>
@@ -26,15 +26,15 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Cantidad</ion-label>
-      <ion-input type="number" name="txtCantidad" [(ngModel)]="producto.cantidad" required></ion-input>
+      <ion-input type="number" name="txtCantidad" [(ngModel)]="producto.cantidad" (ionChange)="calcularValorTotal()" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Valor Unitario</ion-label>
-      <ion-input type="number" name="txtValorUnitario" [(ngModel)]="producto.valorUnitario" required></ion-input>
+      <ion-input type="number" name="txtValorUnitario" [(ngModel)]="producto.valorUnitario" (ionChange)="calcularValorTotal()" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Valor Total</ion-label>
-      <ion-input type="number" name="txtValorTotal"  [(ngModel)]="producto.valorTotal" required></ion-input>
+      <ion-input type="number" name="txtValorTotal" [(ngModel)]="producto.valorTotal" readonly></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Fecha</ion-label>
@@ -42,7 +42,7 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Proveedor</ion-label>
-      <ion-input type="text" name="txtProveedor"[(ngModel)]="producto.proveedor" required></ion-input>
+      <ion-input type="text" name="txtProveedor" [(ngModel)]="producto.proveedor" required></ion-input>
     </ion-item>
     <ion-row>
       <ion-col>

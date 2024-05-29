@@ -52,6 +52,9 @@ export class UpdateProductoPage {
       }
     )
   }
+  calcularValorTotal() {
+    this.producto.valorTotal = this.producto.cantidad * this.producto.valorUnitario;
+  }
 
   updateProducto(){
    this.productoServ.updateProducto( this.producto ).subscribe()

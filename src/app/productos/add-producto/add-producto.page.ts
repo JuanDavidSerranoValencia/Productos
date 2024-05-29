@@ -33,6 +33,10 @@ export class AddProductoPage implements OnInit {
 
   ngOnInit() {
   }
+  
+  calcularValorTotal() {
+    this.newProducto.valorTotal = this.newProducto.cantidad * this.newProducto.valorUnitario;
+  }
 
   crearProducto(){
     this.productoService.crearProductos(this.newProducto).subscribe()

@@ -10,11 +10,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-  <form>
+<ion-content>
+  <form (ngSubmit)="crearProducto()">
     <ion-item lines="full">
       <ion-label position="floating">Presupuesto</ion-label>
-      <ion-input type="text" name="txtPresupuesto"  [(ngModel)]="newProducto.presupuesto" required></ion-input>
+      <ion-input type="text" name="txtPresupuesto" [(ngModel)]="newProducto.presupuesto" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Unidad</ion-label>
@@ -26,15 +26,15 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Cantidad</ion-label>
-      <ion-input type="number" name="txtCantidad" [(ngModel)]="newProducto.cantidad" required></ion-input>
+      <ion-input type="number" name="txtCantidad" [(ngModel)]="newProducto.cantidad" (ionChange)="calcularValorTotal()" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Valor Unitario</ion-label>
-      <ion-input type="number" name="txtValorUnitario" [(ngModel)]="newProducto.valorUnitario" required></ion-input>
+      <ion-input type="number" name="txtValorUnitario" [(ngModel)]="newProducto.valorUnitario" (ionChange)="calcularValorTotal()" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Valor Total</ion-label>
-      <ion-input type="number" name="txtValorTotal"  [(ngModel)]="newProducto.valorTotal" required></ion-input>
+      <ion-input type="number" name="txtValorTotal" [(ngModel)]="newProducto.valorTotal" readonly></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Fecha</ion-label>
@@ -42,14 +42,13 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Proveedor</ion-label>
-      <ion-input type="text" name="txtProveedor"[(ngModel)]="newProducto.proveedor" required></ion-input>
+      <ion-input type="text" name="txtProveedor" [(ngModel)]="newProducto.proveedor" required></ion-input>
     </ion-item>
 
     <ion-row>
       <ion-col>
-        <ion-button (click)="crearProducto()" color="success" expand="block">Guardar</ion-button>
+        <ion-button type="submit" color="success" expand="block">Guardar</ion-button>
       </ion-col>
     </ion-row>
-
   </form>
 </ion-content>
