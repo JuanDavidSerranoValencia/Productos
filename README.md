@@ -1,3 +1,7 @@
+## Desarrolladores
+- Juan David Serrano
+- Jesus Daniel Carrillo Suescun
+ 
  # Proyecto CRUD con Ionic y Angular
 
 Este proyecto es una aplicación CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar productos, construida con Ionic y Angular. Utiliza `json-server` para simular una API RESTful.
