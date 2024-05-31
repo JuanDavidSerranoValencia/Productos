@@ -1,0 +1,33 @@
+.custom-card {
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-card-header {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .custom-card-content {
+    padding: 8px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .custom-button {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  

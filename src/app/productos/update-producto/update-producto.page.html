@@ -3,53 +3,49 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Update</ion-title>
+    <ion-title class="title">Update</ion-title>
     <ion-buttons slot="end">
       <ion-back-button text="Back"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content class="content">
   <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Presupuesto</ion-label>
-      <ion-input type="text" name="txtPresupuesto" [(ngModel)]="producto.presupuesto" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Unidad</ion-label>
-      <ion-input type="text" name="txtUnidad" [(ngModel)]="producto.unidad" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Producto</ion-label>
-      <ion-input type="text" name="txtProducto" [(ngModel)]="producto.producto" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Cantidad</ion-label>
-      <ion-input type="number" name="txtCantidad" [(ngModel)]="producto.cantidad" (ionChange)="calcularValorTotal()" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Valor Unitario</ion-label>
-      <ion-input type="number" name="txtValorUnitario" [(ngModel)]="producto.valorUnitario" (ionChange)="calcularValorTotal()" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Valor Total</ion-label>
-      <ion-input type="number" name="txtValorTotal" [(ngModel)]="producto.valorTotal" readonly></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Fecha</ion-label>
-      <ion-input type="date" name="txtFecha" [(ngModel)]="producto.fecha" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Proveedor</ion-label>
-      <ion-input type="text" name="txtProveedor" [(ngModel)]="producto.proveedor" required></ion-input>
-    </ion-item>
-    <ion-row>
-      <ion-col>
-        <ion-button (click)="updateProducto()"color="success" expand="block">Update</ion-button>
-      </ion-col>
-    </ion-row>
-
+    <ion-list class="form-list">
+      <ion-item lines="none">
+        <ion-label position="stacked" color="primary">Presupuesto</ion-label>
+        <ion-input type="text" name="txtPresupuesto" [(ngModel)]="producto.presupuesto" required></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked" color="primary">Unidad</ion-label>
+        <ion-input type="text" name="txtUnidad" [(ngModel)]="producto.unidad" required></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked" color="primary">Producto</ion-label>
+        <ion-input type="text" name="txtProducto" [(ngModel)]="producto.producto" required></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked" color="primary">Cantidad</ion-label>
+        <ion-input type="number" name="txtCantidad" [(ngModel)]="producto.cantidad" (ionChange)="calcularValorTotal()" required></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked" color="primary">Valor Unitario</ion-label>
+        <ion-input type="number" name="txtValorUnitario" [(ngModel)]="producto.valorUnitario" (ionChange)="calcularValorTotal()" required></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked" color="primary">Valor Total</ion-label>
+        <ion-input type="number" name="txtValorTotal" [(ngModel)]="producto.valorTotal" readonly></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked" color="primary">Fecha</ion-label>
+        <ion-input type="date" name="txtFecha" [(ngModel)]="producto.fecha" required></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked" color="primary">Proveedor</ion-label>
+        <ion-input type="text" name="txtProveedor" [(ngModel)]="producto.proveedor" required></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="updateProducto()" color="primary" expand="full" shape="round" class="update-button">Update</ion-button>
   </form>
 </ion-content>
-

@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>List</ion-title>
+    <ion-title>Products List</ion-title>
     <ion-buttons slot="end">
       <ion-button [routerLink]="['/add-producto']">Add Product</ion-button>
     </ion-buttons>
@@ -11,9 +11,33 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let prod of productos; let indexArray = index" [routerLink]="['/detail-producto', prod.id]">
-      <ion-label> {{prod.producto}} </ion-label>
-    </ion-item>    
-  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <!-- Barra de búsqueda para filtrar por producto -->
+      <ion-col size="6">
+        <ion-searchbar [(ngModel)]="filtro.producto" placeholder="Buscar por producto" (ionInput)="onFilterChange()"></ion-searchbar>
+      </ion-col>
+      <!-- Barra de búsqueda para filtrar por unidad -->
+      <ion-col size="6">
+        <ion-searchbar [(ngModel)]="filtro.unidad" placeholder="Buscar por unidad" (ionInput)="onFilterChange()"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Lista de productos con diseño de tarjetas -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let prod of filteredProductos; let indexArray = index">
+        <ion-card [routerLink]="['/detail-producto', prod.id]">
+          <ion-card-header>
+            <ion-card-title>Producto:{{ prod.producto }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Unidad: {{ prod.unidad }}</p>
+            <p>Id: {{ prod.id  }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
