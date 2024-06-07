@@ -31,39 +31,41 @@ npm install -g @ionic/cli
 ionic start nombre-del-proyecto sidemenu --type=angular
 ```
 
-### 4. Instalar `json-server`
+Aquí tienes los pasos para configurar Mockapi en tu archivo README:
 
-```bash
-npm install -g json-server@0.17.4
-```
+## Pasos para Configurar Mockapi
 
-### 5. Crear el Archivo `db.json`
+### 1. Crear una Cuenta en Mockapi
 
-En el directorio raíz del proyecto, crea un archivo `db.json` con el siguiente contenido:
+1. Ve a [mockapi.io](https://mockapi.io).
+2. Regístrate para una cuenta o inicia sesión si ya tienes una.
 
-```json
-{
-  "productos": [
-        {
-      "presupuesto": "fdf",
-      "unidad": "sddfsd",
-      "producto": "papas",
-      "cantidad": 4,
-      "valorUnitario": 3,
-      "valorTotal": 12,
-      "fecha": "2024-05-03",
-      "proveedor": "fdsfds",
-      "id": 2
-    }
-]
-}
-```
+### 2. Crear un Proyecto
 
-### 6. Iniciar `json-server`
+1. Una vez que estés en el dashboard, crea un nuevo proyecto.
+2. Dale un nombre a tu proyecto.
 
-```bash
-json-server --watch db.json --port 3000
-```
+### 3. Crear un Endpoint
+
+1. Dentro de tu proyecto, crea un nuevo recurso. Por ejemplo, puedes llamarlo `productos`.
+2. Define el esquema del recurso según tus necesidades. Basado en tu archivo `db.json`, el esquema podría ser algo como esto:
+    - `presupuesto`: string
+    - `unidad`: string
+    - `producto`: string
+    - `cantidad`: number
+    - `valorUnitario`: number
+    - `valorTotal`: number
+    - `fecha`: date
+    - `proveedor`: string
+    - `id`: number (auto-generado)
+3. Agrega algunos datos de ejemplo que coincidan con el esquema.
+
+### 4. Obtener la URL del Endpoint
+
+1. Una vez que hayas creado tu recurso, Mockapi generará una URL para el endpoint.
+2. Este endpoint será algo similar a `https://your-subdomain.mockapi.io/api/v1/productos`.
+
+Ahora puedes usar esta URL en tu proyecto para hacer peticiones a la API.
 
 ## Crear las Páginas Necesarias
 
