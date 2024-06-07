@@ -508,7 +508,7 @@ Definir la URL de la API en el archivo de configuración del entorno.
 ```typescript
 export const environment = {
   production: false,
-  apiURL: 'http://localhost:3000'
+   apiURL: "https://665a2826003609eda45d375f.mockapi.io",
 };
 ```
 
@@ -539,11 +539,6 @@ Este esquema proporciona una base robusta para implementar y gestionar productos
 ionic serve
 ```
 
-### 2. Asegurarse de que `json-server` esté Corriendo
-
-```bash
-json-server --watch db.json --port 3000
-```
 
 ## Conclusión
 
