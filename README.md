@@ -581,5 +581,5 @@ Esta guía proporciona los pasos para configurar una aplicación CRUD con Ionic 
 
 - **getProductoById**: Método para obtener los detalles de un producto específico por su ID y mostrarlo en la página.
 
-- ### Link Carpeta Apk
+### Link Carpeta Apk
 - https://drive.google.com/drive/folders/1Az6tMl4m476-JoUdmp3fGhi9XAa0oegZ?usp=sharing
